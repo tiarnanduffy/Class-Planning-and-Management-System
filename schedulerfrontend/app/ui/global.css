@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bahnschrift {
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+.text-underlined {
+  text-decoration: underline;
+}
+
+.properbutton {
+  display: flex;
+  align-items: center;
+  width: 8.333333%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: #3b82f6;
+  /* Assuming bg-blue-500 corresponds to this hex color */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  /* Assuming font-medium corresponds to this font-weight */
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+  /* Assuming transition on background-color */
+}
+
+.properbutton:hover {
+  background-color: #93c5fd;
+  /* Assuming hover:bg-blue-400 corresponds to this hex color */
+}
+
+.disabledButton:disabled {
+  background-color: rgb(135, 137, 143);
+}
+
+@media (min-width: 768px) {
+  .properbutton {
+    font-size: 1rem;
+  }
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.gap {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+
+
+.bottom_gap {
+  margin-bottom: 30px;
+}
+
+.header {
+  font-size: 20px;
+  color: black;
+  background-color: rgb(211, 206, 234);
+}
+
+.topRight {
+  position: absolute;
+  top: 0;
+  right: 2.9%;
+}
+
+.center {
+  padding: 10px;
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 80%;
+  /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 80%;
+  /* Full-width */
+  height: 10px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: rgb(35, 87, 255);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: rgb(35, 87, 255);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(130, 130, 253);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: -5px;
+  left: 105%; 
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  /* opacity: 1; */
+}
